@@ -1,0 +1,53 @@
+<html>
+    <head>
+       <title>Mi Aplicación de Selfies</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="style.css" rel="stylesheet">
+
+<!-- esto nos permitira acceder a la camara usaremos ka biblioteca webcam,js y debemos darle el enla-->
+<!-- vamos a actividad del alumno 1 o actividad 4 maestra y copiamos el primer enlace-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+
+<!--una vez que tenemos la url es necesario descargar el enlace 5 de maestra 2 de alumno y se descarga siguiendo lo siguiente
+1-abrimos el link 5 maestra o 2 alumno
+2-seguimos los pasos el 1 ya esta con la linea 13
+3- se configura la camara web esto se divide en dos configurar camara y adjuntarla
+esto esta en js linea 51 webcamset -->
+</head>
+ 
+<body>
+    <div class="container">
+    <center>
+        <a href="" id="link" download="myselfie.png"></a> <!--1--Etiqueta para descargar la selfie el href vacio por que se actualizara en las siguientes -->
+        <h1>Aplicación de voz para tomar selfies
+        <img id="logo_img" src="selfie.jpeg" > <!--1--se reemplaza la imagen en la etiqueta con la foto del alumno-->
+        </h1>
+
+        <hr>
+        <h4 style="color:red;">Haz clic en permitir cuando aparezca la ventana emergente, después de dar una orden de voz.</h4>
+        
+        <div class="form-group">
+            <h3>Di "toma mi selfie"</h3>
+            <label>Tu salida de voz: </label>
+            <textarea class="form-control" id="textbox" readonly="true"></textarea> <!--1--//text area que contiene el texto del audio esya readonlyu para que no se peuda escribir nada mas que lo que escucha-->
+        </div>
+
+        <button class="btn btn-primary" onclick="start()">Iniciar</button> <!--1--//añadimos boton iniciar-->
+        <p>Haz clic en el botón Iniciar</p>
+
+        <label>Tu cámara: </label>
+        <div id="camera"></div><!--1-- // se añade div para reflejar la salida de la cam-->
+        <br>
+
+        <label>Tu selfie aparecerá aquí: </label>
+        <div id="result"></div> <!--1--// div para la selfie que tome la camara web-->
+    </center>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
